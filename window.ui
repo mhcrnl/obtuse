@@ -5,14 +5,10 @@
     <property name="title" translatable="yes">Obtuse</property>
     <property name="default-width">600</property>
     <property name="default-height">400</property>
-    <child>
-      <object class="GtkBox" id="content_box">
-	<property name="visible">True</property>
-	<property name="orientation">vertical</property>
-	<child>
+    <child type="titlebar">
 	  <object class="GtkHeaderBar" id="header">
 	    <property name="visible">True</property>
-
+	    <property name="show-close-button">True</property>
 	    <child>
 	      <object class="GtkLabel" id="lines_label">
 		<property name="visible">False</property>
@@ -75,7 +71,14 @@
 	    </child>
 	    
 	  </object>
-	</child>
+
+    </child>
+    
+    <child>
+      <object class="GtkBox" id="content_box">
+	<property name="visible">True</property>
+	<property name="orientation">vertical</property>
+
 
 	<child>
 	  <object class="GtkSearchBar" id="searchbar">
