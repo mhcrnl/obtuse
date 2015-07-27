@@ -4,7 +4,7 @@
     <section>
       <item>
 	<attribute name="label" translatable="yes">_Words</attribute>
-	<attribute name="action">win.show-action</attribute>
+	<attribute name="action">win.show-words</attribute>
       </item>
 
       <item>
