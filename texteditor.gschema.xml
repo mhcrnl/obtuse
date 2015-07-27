@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="texteditor">
+    <key name="font" type="s">
+      <default>'Monospace 12'</default>
+      <summary>Font</summary>
+      <description>The font to be used when displaying content</description>
+    </key>
+
+    <key name="transition" type="s">
+      <choices>
+	<choice value="none" />
+	<choice value="crossfade" />
+	<choice value="slide-left-right" />
+      </choices>
+      <default>"crossfade"</default>
+      <summary>Transition</summary>
+      <description>How to switch between tabs</description>
+    </key>
+
+    <key name="show-words" type="b">
+      <default>false</default>
+      <summary>Show words</summary>
+      <description>Show words list in sidebar?</description>
+    </key>
+  </schema>
+</schemalist>
