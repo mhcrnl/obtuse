@@ -36,7 +36,7 @@ static void text_editor_prefs_dispose(GObject* object){
 
 static void text_editor_prefs_class_init(TextEditorPrefsClass* class){
   G_OBJECT_CLASS(class)->dispose = text_editor_prefs_dispose;
-  gtk_widget_class_set_template_from_resource(GTK_WIDGET_CLASS(class), "prefs.ui");
+  gtk_widget_class_set_template_from_resource(GTK_WIDGET_CLASS(class), "/prefs.ui");
   gtk_widget_class_bind_template_child_private(GTK_WIDGET_CLASS(class), TextEditorPrefs, font);
   gtk_widget_class_bind_template_child_private(GTK_WIDGET_CLASS(class), TextEditorPrefs, transition);
 }

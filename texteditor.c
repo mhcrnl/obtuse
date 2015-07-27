@@ -43,7 +43,7 @@ static void text_editor_startup(GApplication* app){
   G_APPLICATION_CLASS(text_editor_parent_class)->startup(app);
   g_action_map_add_action_entries(G_ACTION_MAP(app), app_entries, G_N_ELEMENTS(app_entries), app);
   gtk_application_set_accels_for_action(GTK_APPLICATION(app), "app.quit", quit_accels);
-  builder = gtk_builder_new_from_resource("app-menu.ui");
+  builder = gtk_builder_new_from_resource("/app-menu.ui");
   app_menu = G_MENU_MODEL(gtk_builder_get_object(builder, "appmenu"));
   gtk_application_set_app_menu(GTK_APPLICATION(app), app_menu);
   g_object_unref(builder);

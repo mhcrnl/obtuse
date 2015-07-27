@@ -168,7 +168,7 @@ static void text_editor_window_init(TextEditorWindow* win){
   g_object_bind_property(priv->search, "active", priv->searchbar, "search-mode-enabled", G_BINDING_BIDIRECTIONAL);
   g_signal_connect(priv->sidebar, "notify::reveal-child", G_CALLBACK(words_changed), win);
 
-  builder = gtk_builder_new_from_resource("gears-menu.ui");
+  builder = gtk_builder_new_from_resource("/gears-menu.ui");
   menu = G_MENU_MODEL(gtk_builder_get_object(builder, "menu"));
   gtk_menu_button_set_menu_model(GTK_MENU_BUTTON(priv->gears), menu);
   g_object_unref(builder);
@@ -195,7 +195,7 @@ static void text_editor_window_dispose(GObject* object){
 
 static void text_editor_window_class_init(TextEditorWindowClass* class){
   G_OBJECT_CLASS(class)->dispose = text_editor_window_dispose;
-  gtk_widget_class_set_template_from_resource(GTK_WIDGET_CLASS(class), "window.ui");
+  gtk_widget_class_set_template_from_resource(GTK_WIDGET_CLASS(class), "/window.ui");
   gtk_widget_class_bind_template_child_private(GTK_WIDGET_CLASS(class), TextEditorWindow, stack);
   gtk_widget_class_bind_template_child_private(GTK_WIDGET_CLASS(class), TextEditorWindow, search);
   gtk_widget_class_bind_template_child_private(GTK_WIDGET_CLASS(class), TextEditorWindow, searchbar);
